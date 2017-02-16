@@ -51,7 +51,7 @@ public class Sentiment extends AppCompatActivity {
 
         sourceText = sourceTextView.getText().toString();
         String getURL = "https://api.sentigem.com/external/get-sentiment?" +
-                "api-key=35c33f3e8ab9ceb2883f7895f35654e859tMJdDCrgKS6xL2HTmBWAqsZz_pEjyN" +"&text="+
+                "api-key=6f30c1c09fd2d3e64921214da51407b0LeufsTjYtrgAmMDao2y64NqUc3PWvz5I" +"&text="+
                 sourceText+"";//The API service URL
         //    final String response1 = "";
         OkHttpClient client = new OkHttpClient();
