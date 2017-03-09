@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+    <style>
+        body{
+            background-image:url('coco.jpeg');
+            background-size:cover;
+        }
+        .navbar-brand {
+            color:purple;
+        }
+        .row{
+            font-size: 25px;
+        }
+        .btn-primary
+        {
+            height:75px;
+            width :150px;
+        }
+
+    </style>
+</head>
+
+<body>
+<center>
+    <nav class="navbar navbar-light bg-faded">
+        <a href="login2.html" class="btn btn-link" id="logout"><strong>Logout</strong>
+            <span >
+                <i class="glyphicon glyphicon-off"></i>
+            </span></a>
+    </nav>
+</center>
+<center>
+<div class="row">
+    <div class="col-md-12">
+        <div class="apiClass">
+            <font id="spanTextToSpeechHeading"><font size="20" color="white"><strong>Zip Code Teller</strong></font></span><br><br>
+            <button type="submit" class="btn btn-primary" id="textToSpeech" onclick="location.href='mashup.html'" class="btn btn-primary">Zip Code Teller</button>
+        </div>
+        <br>
+        <div class="apiClass">
+            <span id="spanBarCodeHeading"><font size="20" color="white"><strong>Barcode Scanner</strong></font></span><br><br>
+            <button type="submit" class="btn btn-primary" id="barCodeScanner" onclick="location.href='barcode.html'" class="btn btn-primary">Barcode</button>
+        </div>
+    </div>
+</div>
+</center>
+</body>
+</html>
