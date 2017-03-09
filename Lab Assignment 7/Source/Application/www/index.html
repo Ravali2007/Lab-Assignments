@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+
+
+    <!-- cordova script (this will be a 404 during development) -->
+
+
+    <!-- your app's js -->
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+  <script src="lib/moment/moment.js"></script>
+<script src="lib/angular-moment/angular-moment.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src="js/services.js"></script>
+    <style>
+    body{
+    margin-top: 16%;
+    background:url('img/Background.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-left:40%;
+}
+#login{
+  border:1px solid black;
+  padding-left:120px;
+  padding-right:120px;
+ font-size:20px;
+  border-radius:5px;
+  padding-top:10px;
+  padding-bottom:10px;
+  background: white;
+  color:black;
+}
+#registration{
+  border:1px solid black;
+    font-size:20px;
+     padding-left:95px;
+  padding-right:95px;
+  margin-top:17px;
+  border-radius:5px;
+  padding-top:10px;
+  padding-bottom:10px;
+  background:white;
+  color:black;
+}
+#LoginImage{
+  height:100px;
+  width:100px;
+}
+#RegistrationImage{
+    height:100px;
+  width:100px;
+  margin-top:13px;
+}
+    </style>
+  </head>
+  <body ng-app="startApp" class="Welcome" ng-controller="PersonController">
+  <img src='img/LoginImageIcon1.png' id="LoginImage">
+  <button type="button" class="btn btn-default" id="login" onclick="window.location='Login.html'">Login</button>
+  <p><img src='img/RegistrationImageIcon1.png' id="RegistrationImage">
+  <button type="button" class="btn btn-default" id="registration" onclick="window.location='Registration.html'">Registration</button>
+  </p>
+  </body>
+</html>

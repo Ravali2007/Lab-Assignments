@@ -1,0 +1,46 @@
+body{
+    background: url('img/Background.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+h2{
+    font-family: Microsoft sans-serif;
+    text-align:center;
+}
+.loginContainer{
+    top:170px;
+    background: white;
+    border-radius: 10px;
+    left:20px;
+    width: 50%;
+    padding-bottom:20px;
+}
+.registrationContainer{
+    top:75px;
+    background: white;
+    border-radius: 10px;
+    width: 50%;
+    padding-bottom:20px;
+}
+.input-group{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.form-actions{
+    padding-top:10px;
+}
+button.btn.btn-primary {
+    border-radius: 8px;
+}
+.failure{
+    color: red;
+    font-size:20px;
+    font-weight:bold;
+    font-family: Microsoft sans-serif;
+}
+.success{
+    color: #67b967;
+    font-size:20px;
+    font-weight:bold;
+    font-family: Microsoft sans-serif;
+}

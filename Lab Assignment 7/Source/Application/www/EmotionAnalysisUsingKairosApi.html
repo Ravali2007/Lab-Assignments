@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmKK4QHG8bOVHJucaDIZim1xTL9ydWI7s&v=3.exp&sensor=true&amp;libraries=places"></script>
+    <script src="js/LoginController.js" type="text/javascript"></script>
+    <script src="js/emotionAnalysisUsingKairos.js" type="text/javascript"></script>
+
+<style>
+    .form-control{
+    border-radius:8px;
+}
+.navbar{
+	height: 150px;
+    background: url('img/Background.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.navbar-brand{
+	padding-top: 50px;
+    color:white;
+    padding-left:37%;
+    font-family: Microsoft sans-serif;
+    font-size:35px;
+}
+.form-group{
+    margin-bottom:-12px;
+}
+#emotionLogo{
+      height:60px;
+    width:60px;
+    float:left;
+    margin-left:50px;
+    margin-top:5px;
+}
+#logout{
+    color: white;
+    padding-left: 32%;
+    font-family: Micro;
+    padding-top: 1.5%;
+    font-family: Microsoft sans-serif;
+    font-size:15px;
+}
+.glyphicon-off{
+    font-size:13px;
+}
+body{
+    background: url('http://media.istockphoto.com/photos/abstract-blue-background-with-light-effects-picture-id524700656?k=6&m=524700656&s=170667a&w=0&h=AmUG14MkQ_om6wPzRfflzGHrsVGG-ZnIl8MOcJFg2Ik=');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row{
+    width:60%;
+}
+.table{
+    margin-top:-420px;
+    width:40%;
+    border:1px solid black;
+    border-radius:8px;
+    margin-left:5%;
+}
+#EmotionAnalysisImageIcon{
+	width:20%;
+    margin-left:1050px;
+    margin-top:70px;
+}
+#analyze{
+    margin-top:-60px;
+    margin-left:750px;
+    background-color: #94b7f3;
+}
+label.btn.btn-primary {
+    background: #94b7f3;
+    margin-left:30px;
+}
+span#upload-file-info {
+    border: 1px solid gray;
+    background: white;
+    color:black;
+    padding: 10px;
+    width: 700px;
+    padding-right: 500px;
+    border-radius: 5px;
+}
+    </style>
+</head>
+
+<body>
+<div ng-app="Application" ng-controller="EmotionAnalysisController">
+<nav class="navbar navbar-light bg-faded">
+<!--    <img src="https://s3.amazonaws.com/kairos-media/icons/facial-expression-detection.png" id="emotionLogo">-->
+    <h1 class="navbar-brand m-b-0">Emotion Analysis
+    </h1>
+    <a href="Login.html" class="btn btn-link" id="logout">Logout
+        <span >
+                <i class="glyphicon glyphicon-off"></i>
+            </span></a>
+</nav>
+<label class="btn btn-primary" for="my-file-selector">
+    <input id="my-file-selector" type="file" style="display:none;" onchange="$('#upload-file-info').html($(this).val());">
+    Select file
+</label>
+<span class='label label-info' id="upload-file-info"></span>
+<div class="form-group">
+    
+    <button type="submit" ng-click="getEmotionAnalysisData()" id="analyze" class="btn btn-primary">Emotion Analyze</button>
+</div>
+<img id="EmotionAnalysisImageIcon" src='img/Emotion.PNG'>
+<table class='table' id="data"></table>
+</div>
+</body>
+</html>

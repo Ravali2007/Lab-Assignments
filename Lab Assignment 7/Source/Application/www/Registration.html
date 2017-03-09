@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Registration Page</title>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Login.css">
+
+    <!-- JS Links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+    <script src="lib/moment/moment.js"></script>
+<script src="lib/angular-moment/angular-moment.js"></script>
+    <script src="js/LoginController.js"></script>
+    <script src="js/RegistrationController.js"></script>
+
+</head>
+<style>
+    body{
+    background: url('img/Background.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+h2{
+    font-family: Microsoft sans-serif;
+    text-align:center;
+}
+.registrationContainer{
+    top:50px;
+    background: white;
+    border-radius: 10px;
+    width: 35%;
+    left:10%;
+    padding-bottom:20px;
+    padding:20px;
+     border: 1px solid #dddddd;
+}
+.input-group{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.form-actions{
+    padding-top:10px;
+}
+button.btn.btn-primary {
+    font-size:20px;
+    font-weight:bold;
+    border-radius: 8px;
+}
+.failure{
+    color: red;
+    font-size:20px;
+    font-weight:bold;
+    font-family: Microsoft sans-serif;
+}
+.success{
+    color: #67b967;
+    font-size:20px;
+    font-weight:bold;
+    font-family: Microsoft sans-serif;
+}
+#registrationLogo{
+     height:100px;
+    width:100px;
+    margin-left:260px;
+    border: 1px solid #e6e6e6;
+    border-radius: 128px;
+}
+    a.btn.btn-link{
+        color:black;
+    }
+</style>
+<body>
+<div ng-app="Application" ng-controller="RegistartionController" class="col-md-6 col-md-offset-3 registrationContainer">
+  <img src="img/RegistrationImageIcon1.png" id="registrationLogo">
+    <h2>Registration</h2>
+    <div class="success">{{RegistrationMessageSuccess}}</div>
+    <div class="failure">{{RegistrationMessageFailure}}</div>
+    <form novalidate name="registrationForm" ng-submit="Register()">
+        <div class="input-group" ng-class="{ 'has-error': registrationForm.firstname.$dirty && registrationForm.firstname.$error.required }">
+    	<span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input type="text" name="Name" id="firstname" class="form-control" placeholder="Name" ng-model="RegistrationData.Name" required />
+            <span ng-show="registrationForm.name.$dirty && registrationForm.name.$error.required" class="help-block">Name is required</span>
+        </div>
+        <div class="input-group" ng-class="{ 'has-error': registrationForm.username.$dirty && registrationForm.username.$error.required }">
+    	<span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Username" ng-model="RegistrationData.Username" required />
+            <span ng-show="registrationForm.username.$dirty && registrationForm.username.$error.required" class="help-block">Username is required</span>
+        </div>
+        <div class="input-group" ng-class="{ 'has-error': registrationForm.email.$dirty && registrationForm.email.$error.required }">
+    <span class="input-group-addon">
+                <i class="glyphicon glyphicon-envelope"></i>
+            </span>
+            <input type="text" name="email" id="email" class="form-control" placeholder="EmailId" ng-model="RegistrationData.Email" required />
+            <span ng-show="registrationForm.email.$dirty && registrationForm.email.$error.required" class="help-block">Email is required</span>
+        </div>
+
+        <div class="input-group" ng-class="{ 'has-error': registrationForm.password.$dirty && registrationForm.password.$error.required }">
+    	<span class="input-group-addon">
+                <i class="glyphicon glyphicon-lock"></i>
+            </span>
+            <input type="password" name="password" id="password" placeholder="Password" class="form-control" ng-model="RegistrationData.Password" required />
+            <span ng-show="registrationForm.password.$dirty && registrationForm.password.$error.required" class="help-block">Password is required</span>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" ng-disabled="registrationForm.$invalid" class="btn btn-primary">Register</button>
+            <a href="Login.html" class="btn btn-link">Cancel</a>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
+    <link rel="stylesheet" href="Welcome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+<style>
+.navbar{
+	height: 150px;
+    background: url('img/Background.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+body{
+    background: url('http://media.istockphoto.com/photos/abstract-blue-background-with-light-effects-picture-id524700656?k=6&m=524700656&s=170667a&w=0&h=AmUG14MkQ_om6wPzRfflzGHrsVGG-ZnIl8MOcJFg2Ik=');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar-brand{
+	padding-top: 50px;
+    color:white;
+    padding-left:40%;
+    font-family: Microsoft sans-serif;
+    font-size:40px;
+}
+#logout{
+    color:white;
+    padding-left: 36%;
+    font-family: Micro
+    padding-top: 1.5%;
+    font-family: Microsoft sans-serif;
+    font-size:15px;
+}
+.glyphicon-off{
+    font-size:13px;
+}
+.row{
+    width:60%;
+    margin-left:13%;
+    margin-top:5%;
+}
+.apiClass{
+    margin-top:10px;
+}
+.btn{
+    font-size:20px;
+    font-family:"Microsoft Sans Serif";
+}
+#faceDetection,#textToSpeech,#barCodeScanner{
+    padding:5px;
+    background:#94b7f3
+}
+#spanFaceDetectionHeading,#spanTextToSpeechHeading,#spanBarCodeHeading{
+    font-weight:bold;
+    font-size:20px;
+}
+.intro{
+    font-size:20px;
+}
+#speechToTextLogo,#emotionLogo{
+    height:75px;
+    width:75px;
+}
+	#welcomeIcon{
+      height:60px;
+    width:60px;
+    float:left;
+    margin-left:50px;
+    margin-top:5px;
+}
+img#welcomeIconImage {
+    margin-top: -327px;
+    margin-left: 900px;
+}
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-light bg-faded">
+<!--    <img id="welcomeIcon" src="http://orig07.deviantart.net/ad10/f/2014/087/2/5/panda_welcome__icon_by_mrsebuhi-d7c1kx0.png">-->
+    <h1 class="navbar-brand m-b-0">Home Page
+    </h1>
+    <a href="Login.html" class="btn btn-link" id="logout">Logout
+        <span >
+                <i class="glyphicon glyphicon-off"></i>
+            </span></a>
+</nav>
+<div class="row">
+<div class="col-md-12">
+    <div class="apiClass">
+        <span id="spanTextToSpeechHeading">Speech to Text</span>
+		
+        
+<!--    <img src="img/SpeechToTextBackground.png" id="speechToTextLogo">-->
+        <p class="intro"><br>
+           Speech-to-text is a type of software that effectively takes audio content and transcribes it into written words in a word processor or other display destination. This type of speech recognition software is extremely valuable to anyone who needs to generate a lot of written content without a lot of manual typing </p>
+        <button type="submit" class="btn btn-primary" id="textToSpeech" onclick="location.href='SpeechToText.html'" class="btn btn-primary">Speech to Text</button>
+    
+    </div>
+	<br>
+    <div class="apiClass">
+        <span id="spanFaceDetectionHeading">Emotion Analysis</span>
+<!--        <img src="https://s3.amazonaws.com/kairos-media/icons/facial-expression-detection.png" id="emotionLogo">-->
+        <p class="intro"><br>
+            Analyzes and understands emotion, demographics and attention in most videos and images. It look for faces in footage and pass the facial features and expressions through our face analysis algorithms. It will return values for the 6 universal emotions, age, gender, and other useful meta data about the faces found.
+        </p>
+        <button type="submit" class="btn btn-primary" id="faceDetection" onclick="location.href='EmotionAnalysisUsingKairosApi.html'" class="btn btn-primary">Emotion Analysis</button>
+    </div>
+    </div>
+<!--    <img id="welcomeIconImage" src="http://orig07.deviantart.net/ad10/f/2014/087/2/5/panda_welcome__icon_by_mrsebuhi-d7c1kx0.png">-->
+</div>
+</body>
+</html>
